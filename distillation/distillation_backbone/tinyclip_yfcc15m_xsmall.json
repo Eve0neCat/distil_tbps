@@ -1,0 +1,9 @@
+{
+    "embed_dim": 512,
+    "vision_layers": 10,
+    "vision_width": 256,
+    "vision_heads_size": 64,
+    "transformer_layers": 3,
+    "transformer_width": 256,
+    "transformer_heads_size": 64
+}
