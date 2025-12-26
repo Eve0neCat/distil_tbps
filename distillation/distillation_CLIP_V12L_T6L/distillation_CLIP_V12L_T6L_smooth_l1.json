@@ -1,0 +1,17 @@
+{"distillation": true,
+ "distillation_config": {
+	"use_embedding_states": false,
+	"use_hidden_states": false,
+	"use_attention_scores": false,	
+	"use_value_states": false,	
+	"use_pred_states": true,
+	"use_task_loss": true,
+	"embedding_state_loss": "cosine",
+	"hidden_state_loss": "cosine",
+	"attention_loss": "kld",		
+	"value_state_loss": "cosine",
+	"pred_states_loss": "smooth_l1",
+	"task_loss": "sdm",
+	"student_teacher_layer_mapping": "last_layer"},
+"model_config": "distillation/distillation_backbone/CLIP_V12L_T6L.json"
+}
