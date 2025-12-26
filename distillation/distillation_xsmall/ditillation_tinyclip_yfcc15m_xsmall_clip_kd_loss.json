@@ -1,0 +1,11 @@
+{
+  "temperature": 0.07,
+  "clipkd_use_fd": true,
+  "clipkd_use_icl": true,
+  "clipkd_use_crd": true,
+  "clipkd_fd_weight": 2000,
+  "clipkd_icl_weight": 1.0,
+  "clipkd_crd_weight": 1.0,
+  "clipkd_weight": 0.005,
+  "max_grad_norm": 1.0
+}

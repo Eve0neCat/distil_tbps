@@ -1,0 +1,41 @@
+{"distillation": true,
+ "distillation_config": {
+    "use_embedding_states": false,
+    "use_hidden_states": false,
+    "use_attention_scores": false,
+    "use_value_states": false,
+    "use_pred_states": true,
+    "use_task_loss": true,
+    "embedding_state_loss": "cosine",
+    "hidden_state_loss": "cosine",
+    "attention_loss": "kld",
+    "value_state_loss": "cosine",
+    "pred_states_loss": "fd",
+    "task_loss": "icl_crd",
+    "student_teacher_layer_mapping": "last_layer",
+    
+    "clipkd_config": {
+      "use_fd": true,
+      "use_icl": true,
+      "use_crd": true,
+      "use_gd": false,
+      "use_mfd": false,
+      "use_afd": false,
+      
+      "distillation_method": "fd_icl_crd",
+      
+      "fd_loss_type": "mse",
+      "icl_temperature": 0.07,
+      "crd_temperature": 0.07,
+      "normalize_features": true,
+      
+      "description": "CLIP-KD best configuration: FD + ICL + CRD"
+    }
+  },
+  "model_config": "distillation/distillation_backbone/tinyclip_yfcc15m_xsmall.json",
+  
+  "training_config": {
+    "description": "CLIP-KD training configuration for TinyCLIP on YFCC15M",
+    "note": "According to CLIP-KD paper Table 1, FD+ICL+CRD achieves best performance"
+  }
+}
